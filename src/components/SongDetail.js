@@ -1,18 +1,22 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const SongDetail = ({ selectedSong }) => {
+const SongDetail = ( {selectedSong} ) => {
     if (!selectedSong) {
-        return (
-            <div className='ui loading segment' style={{ height: '50px' }}></div>
-        )
+        return null;
     };
 
     return (
         <div className='ui placeholder segment' style={{ backgroundColor: 'lightseagreen' }}>
             <div className='ui header'>Details For:</div>
-            <div>Title: {selectedSong}</div>
+            <div><h3>Title:</h3>{selectedSong.title}</div>
+            <div><h3>Full Title:</h3>{selectedSong.full_title}</div>
         </div>
     );
 };
 
-export default SongDetail;
+const mapStateToProps = (state) => {
+    return { selectedSong: state.selectedSong };
+};
+
+export default connect(mapStateToProps)(SongDetail);

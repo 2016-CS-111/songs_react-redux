@@ -16,8 +16,5 @@ You will also see any lint errors in the console.
 
 ### Song List
 
-Calling RapidAPI Genius lyrics for songs to get their song names.
-
-### Furthermore
-
-By clicking on button this also give name of song in separate 'place holder segment'/"Details For"
+SongList for REACT-REDUX tutorial using RapidAPI Genius.
+Select Button for triggering the details of content.
