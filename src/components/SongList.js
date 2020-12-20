@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import SongItem from './SongItem';
 
-const SongList = ({ songs, selectSong }) => {
+const SongList = ({ songs }) => {
     
     const songList = songs.map( (song) => {
         return <SongItem key={song.id} song={song} />;

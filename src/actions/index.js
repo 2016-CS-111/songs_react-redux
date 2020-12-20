@@ -1,6 +1,6 @@
 // Action Creator
 
-export const songsList = (ListofSongs=[]) => {
+export const songsList = (ListofSongs) => {
     return { 
         type: 'SONG_LISTING',
         payload: ListofSongs
